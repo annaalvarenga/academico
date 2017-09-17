@@ -1,0 +1,29 @@
+.row
+  .col-md-10.col-md-offset-1
+    h1.default-margin-b Nova matrícula
+
+    = errors_of @enrollment
+    = form_for @enrollment, html: { role: 'form', novalidate: 'novalidate' } do |f|
+      .form-group
+        = f.label :student_id
+        = f.select :student_id,
+          Student.all.map { |p| [p.name, p.id] },
+          { include_blank: 'Selecione um aluno' },
+          class: 'form-control'
+      .form-group
+        = f.label :course_id
+        = f.select :course_id,
+          Course.all.map { |c| [c.name, c.id] },
+          { include_blank: 'Selecione um curso' },
+          class: 'form-control'
+      .form-group
+        = f.label :enrolled_at, style: 'display: block;'
+        = f.date_select :enrolled_at,
+          {},
+          class: 'form-control',
+          style: 'display: inline-block; width: 150px;'
+
+      = f.submit 'Salvar', class: 'btn btn-success'
+
+    .default-margin-t.default-margin-b
+      = link_to('Ir para a listagem de matrículas', enrollments_path)

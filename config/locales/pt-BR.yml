@@ -4,6 +4,9 @@ pt-BR:
       student:
         one: Aluno
         other: Alunos
+      enrollment:
+        one: Matrícula
+        other: Matrículas
     attributes:
       student:
         name: Nome
@@ -15,3 +18,9 @@ pt-BR:
         city: Cidade
         state: Estado
         postal_code: CEP
+      enrollment:
+        student: Aluno
+        student_id: Aluno
+        course: Curso
+        course_id: Curso
+        enrolled_at: Matrículado em
