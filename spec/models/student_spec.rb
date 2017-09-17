@@ -8,5 +8,6 @@ RSpec.describe Student, type: :model do
     it { should validate_presence_of(:neighborhood) }
     it { should validate_presence_of(:city) }
     it { should validate_presence_of(:state) }
+    it { should validate_presence_of(:postal_code) }
   end
 end
