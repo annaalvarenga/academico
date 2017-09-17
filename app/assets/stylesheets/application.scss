@@ -12,5 +12,19 @@
  *
  */
 
+$font-size-base: 16px;
+
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+.field_with_errors {
+  @extend .has-error;
+}
+
+.default-margin-t {
+  margin-top: 40px;
+}
+
+.default-margin-b {
+  margin-bottom: 40px;
+}
