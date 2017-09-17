@@ -1,0 +1,23 @@
+.row
+  .col-md-10.col-md-offset-1
+    h1.default-margin-b Matrículas
+    - if @enrollments.any?
+      table.table
+        thead
+          tr
+            th Data da matrícula
+            th Aluno
+            th Curso
+        tbody
+          - @enrollments.each do |enrollment|
+            tr
+              td
+                = enrollment.enrolled_at.strftime('%d/%m/%Y')
+              td
+                = enrollment.student.name
+              td
+                = enrollment.course.name
+    - else
+      p Ainda não há matrículas efetuadas.
+    .default-margin-t.default-margin-b
+      = link_to('Nova matrícula', new_enrollment_path, class: 'btn btn-default')

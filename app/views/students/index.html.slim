@@ -1,6 +1,6 @@
 .row
   .col-md-10.col-md-offset-1
-    h1 Alunos
+    h1.default-margin-b Alunos
     - if @students.any?
       table.table
         thead
@@ -22,5 +22,5 @@
                 | CEP: #{student.postal_code}
     - else
       p Ainda não há alunos cadastrados.
-    .medium-margin-t
+    .default-margin-t.default-margin-b
       = link_to('Novo aluno', new_student_path, class: 'btn btn-default')

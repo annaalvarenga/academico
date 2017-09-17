@@ -17,3 +17,12 @@ nav.navbar.navbar-default role='navigation'
             = link_to 'Listagem', students_path
           li
             = link_to 'Novo', new_student_path
+      li.dropdown
+        a.dropdown-toggle href='#' data-toggle='dropdown'
+          | Matrículas
+          b< class='caret'
+        ul.dropdown-menu
+          li
+            = link_to 'Listagem', enrollments_path
+          li
+            = link_to 'Nova', new_enrollment_path
