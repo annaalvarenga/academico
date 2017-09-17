@@ -1,0 +1,19 @@
+nav.navbar.navbar-default role='navigation'
+  .navbar-header
+    button.navbar-toggle type='button' data-toggle='collapse' data-target='#navbar_collapse_1'
+      span.sr-only
+        | Expandir ou contrair
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+  #navbar_collapse_1.collapse.navbar-collapse
+    ul.nav.navbar-nav
+      li.dropdown
+        a.dropdown-toggle href='#' data-toggle='dropdown'
+          | Alunos
+          b< class='caret'
+        ul.dropdown-menu
+          li
+            = link_to 'Listagem', students_path
+          li
+            = link_to 'Novo', students_path

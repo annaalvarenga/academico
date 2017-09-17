@@ -1,0 +1,25 @@
+.row
+  .col-md-10.col-md-offset-1
+    h1 Alunos
+    - if @students.any?
+      table.table
+        thead
+          tr
+            th Nome
+            th Dados pessoais
+            th Endereço
+        tbody
+          - @students.each do |student|
+            tr
+              td
+                = student.name
+              td
+                | Email: #{student.email}<br />
+                | Telefone: #{student.phone}
+              td
+                | #{student.street}, #{student.street_number}. #{student.neighborhood}.
+                |  #{student.city} - #{student.state}
+    - else
+      p Ainda não há alunos cadastrados.
+    .medium-margin-t
+      = link_to('Novo aluno', students_path, class: 'btn btn-default')

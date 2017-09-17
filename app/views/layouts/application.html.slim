@@ -1,0 +1,14 @@
+doctype html
+html lang='pt-BR'
+  head
+    title
+      | Sistema Acadêmico - Anna Carolina Alvarenga
+
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+
+  body
+    = render 'layouts/navbar'
+    .container
+      == yield
