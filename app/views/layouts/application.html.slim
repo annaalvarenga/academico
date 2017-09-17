@@ -10,5 +10,10 @@ html lang='pt-BR'
 
   body
     = render 'layouts/navbar'
+
     .container
+      .row
+        .col-md-10.col-md-offset-1
+          = show_flash_msgs
+
       == yield
