@@ -1,3 +1,5 @@
+require 'net/http'
+
 class SyncsController < ApplicationController
   def index
   end
