@@ -21,6 +21,10 @@ $font-size-base: 16px;
   @extend .has-error;
 }
 
+.small-margin-r {
+  margin-right: 20px;
+}
+
 .default-margin-t {
   margin-top: 40px;
 }

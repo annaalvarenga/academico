@@ -23,4 +23,5 @@
     - else
       p Ainda não há alunos cadastrados.
     .default-margin-t.default-margin-b
-      = link_to('Novo aluno', new_student_path, class: 'btn btn-default')
+      = link_to('Novo aluno', new_student_path, class: 'btn btn-default small-margin-r')
+      = link_to('Sincronizar dados com o MEC', syncs_path, class: 'btn btn-default', method: :post)

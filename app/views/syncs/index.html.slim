@@ -1,0 +1,8 @@
+.row
+  .col-md-10.col-md-offset-1
+    h1.default-margin-b Sincronização com o MEC
+    p
+      | Use o botão abaixo para enviar todos os alunos cadastrados
+      |  para os sistemas do Ministério da Educação e Cultura.
+    .default-margin-t.default-margin-b
+      = link_to('Sincronizar dados com o MEC', syncs_path, class: 'btn btn-default', method: :post)

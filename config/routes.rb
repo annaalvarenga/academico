@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :students, only: [:index, :new, :create]
   resources :enrollments, only: [:index, :new, :create]
+  resources :syncs, only: [:index, :create]
 end

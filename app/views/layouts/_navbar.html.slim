@@ -17,6 +17,8 @@ nav.navbar.navbar-default role='navigation'
             = link_to 'Listagem', students_path
           li
             = link_to 'Novo', new_student_path
+          li
+            = link_to 'Sincronizar dados com o MEC', syncs_path, method: :post
       li.dropdown
         a.dropdown-toggle href='#' data-toggle='dropdown'
           | Matrículas
